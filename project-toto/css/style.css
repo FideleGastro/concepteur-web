@@ -1,0 +1,105 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/* naty */
+
+body{
+	font-family: arial;
+	background: red url('../images/nappe.jpg');
+}
+
+/* principale */
+
+main{
+	width: 700px;
+	min-height: 500px;
+	margin: 0 auto;
+	background: red url('../images/fond.jpg');
+	padding: 10px;
+	box-shadow: 0 0 24px rgba(0,0,0,0.5);
+}
+
+main > header {
+	position: relative;
+	height: 250px;
+	background: url('../images/logo_toto.png') no-repeat;
+}
+
+main > header div#ident {
+	position: absolute;
+	right: 0;
+	top: 0;
+	text-align: :right;
+}
+
+main > header h1{
+	margin: 0;
+	padding: 50px 0 0 0;
+	text-align: center;
+	font-size: 2.5rem;
+}
+
+main > header h4{
+	margin: 0;
+	padding: 10px 0 0 0;
+	text-align: center;
+	font-size: 1.5rem;
+}
+
+main > header nav{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	background: #d6ae87;
+}
+
+main > section{
+	background-color: #d6ae87; 
+	min-height: 250px;
+	border: 1px solid grey;
+}
+
+main > footer{
+	margin: 50px 0;
+	text-align: center;
+}
+
+form input[type=text], 
+form input[type=password] {
+  	width: 150px;
+  	height: 15px;
+ 	border: 1px solid #fff;
+	padding: 4px;
+	color: #666;
+}
+
+form input[type=submit]{
+	background: #ccc;
+}
+
+form input[type=submit]:hover{
+	background: chartreuse;
+}
+
+nav > ul{
+	
+	list-style: none;
+	margin:0;
+	padding: 0;
+}
+nav > ul li {
+	list-style: none;
+	display: inline-block;
+	text-align: center;
+	padding: 10px;
+	margin: 3px 0;
+	width: 100px;
+	background: url('../images/fond.jpg');
+	box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+
+nav > ul li:hover{
+	background: yellow;
+}
+
