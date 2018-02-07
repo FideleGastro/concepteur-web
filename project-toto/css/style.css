@@ -55,13 +55,14 @@ main > header nav{
 	position: absolute;
 	right: 0;
 	bottom: 0;
-	background: #d6ae87;
+	//background: #d6ae87;
 }
 
 main > section{
-	background-color: #d6ae87; 
+	//background-color: #d6ae87; 
 	min-height: 250px;
-	border: 1px solid grey;
+	//border: 1px solid grey;
+	padding: 20px 0;
 }
 
 main > footer{
@@ -97,14 +98,15 @@ nav > ul li {
 	display: inline-block;
 	text-align: center;
 	padding: 10px 0;
-	margin: 3px 0;
-	width: 100px;
+	//margin:  0 -0.16rem;
+	width: 120px;
 	background: url('../images/fond.jpg');
-	box-shadow: 0 0 5px rgba(0,0,0,0.3);
+	//box-shadow: 0 0 5px rgba(0,0,0,0.3);
+	//border-bottom: 1px solid #000;
 }
 
 nav > ul li:hover{
-	background: yellow;
+	//background: yellow;
 }
 
 nav > ul a{
@@ -120,6 +122,10 @@ nav > ul a:hover{
 .active{
 	color: chartreuse;
 	font-weight: bold;
+	border-top: 1px solid #000;
+	border-left: 1px solid #000;
+	border-right: 1px solid #000;
+	border-bottom: none;
 }
 
 .actif{
@@ -135,6 +141,24 @@ nav > div#toggle{
 	//background-size: 80%;
 }
 
+#inscription{
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	 align-items: center;
+  justify-content: center;
+  //background: #fff;
+  border: grey; 
+}
+
+#inscription input[type=text],#inscription input[type=button] {
+	//display: block;
+	height: 35px;
+	width: 50%;
+	margin-bottom: 5px;
+	padding:0 10px;
+}
+
 /* media query */
 
 @media screen and (max-width: 1024px){
@@ -144,7 +168,7 @@ nav > div#toggle{
 	}
 
 	main > section{
-	background-color: DarkGoldenRod; 
+	//background-color: DarkGoldenRod; 
 	
 	}
 
@@ -194,9 +218,15 @@ nav > div#toggle{
 }
 
 .bx-wrapper .bx-viewport {
-	//border:none !important;
-	//box-shadow: none !important;
-	//left:0 !important;
+	border:none !important;
+	box-shadow: 0 0 6px 0 rgba(0,0,0,0.5) !important;
+	left:0 !important;
 	//padding:10px;
+	margin-top: 10px;
+}
+
+form .erreur{
+	background: rgba(255,0,0,0.3);
+	border: 1px solid grey;
 }
 
