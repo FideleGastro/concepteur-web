@@ -1,5 +1,8 @@
 <?php include_once('template/connexion.php'); ?>
+<?php include_once('template/log.php'); ?>
+<?php 
 
+?>
 <div id="ident">
 	<?php 
 	if (isset($_POST['logout']) && $_POST['logout'] == 'true')
@@ -7,6 +10,7 @@
 
 	if(!empty($_POST['mail']) && !empty($_POST['pwd'])){
 		
+
 		$req_account = "SELECT cli_prenom FROM clients WHERE cli_email LIKE '";
 		$req_account .= $_POST['mail'];
 		$req_account .= "' AND cli_mdp LIKE '";
@@ -16,8 +20,15 @@
 		$res_account = $totoDB->query($req_account);
 		$data_account = $res_account->fetch(PDO::FETCH_ASSOC);
 		
-		if($data_account)
+		if($data_account){
+			connexionlog(''.date("m.d.y").' => IP '. getIP(). ' ['.$_POST['mail'].'/'.$_POST['pwd'].'] CONNECTION REUSSI');
 			$_SESSION['name'] = $data_account['cli_prenom'];
+		}
+		else
+			connexionlog(''.date("m.d.y").' => IP '. getIP(). ' ['.$_POST['mail'].'/'.$_POST['pwd'].'] CONNECTION FAIL');
+
+
+
 		
 	}
 	

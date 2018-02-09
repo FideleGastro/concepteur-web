@@ -268,7 +268,7 @@ section .choix_jour.res_valid:hover{
 	background: #cfc;
 }
 
-section .choix_jour:actif{
+section .choix_jour.actif{
 	background: #afa;
 }
 
@@ -278,5 +278,21 @@ section .reserved{
 
 section .choix_jour.res_novalid{
 	background: #ddd;
+}
+
+#autocomp label{
+}
+
+#autocomp label:hover{
+	
+	font-size: 30px;
+}
+
+.display{
+	display: block;
+}
+
+.hide{
+	display: none;
 }
 

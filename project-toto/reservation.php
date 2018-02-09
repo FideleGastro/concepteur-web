@@ -98,13 +98,13 @@ $data = $res->fetch(PDO::FETCH_ASSOC);
 					<?php endfor; ?>
 
 					<?php for ($j=1; $j <= date('t', strtotime('+'.($i+1).' month')); $j++) : ?>
-					<div class="choix_jour res_valid"><?= $j; ?></div>
+					<div onclick="check_resa(this)" class="choix_jour res_valid" data-y="<?= $actu['année'] ?>" data-d="<?= $j; ?>"  data-m="<?= $actu['mois']+ $i+1; ?>" ><?= $j; ?></div>
 					<?php endfor; ?>
-
 					</div>
-
 				<?php endfor; ?>			
-
+			</section>
+			<section>
+				<input class="hide" onclick="set_resa(this)" type="submit" name="reservation" value="Réserver pour le : ">
 			</section>
 			<footer>
 				<?php include_once('template/footer.php'); ?>
