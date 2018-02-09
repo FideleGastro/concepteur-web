@@ -60,10 +60,10 @@ class checkForm {
 		if(this.erreur == true)
 			return false;
 
-		console.log('method: check //'+checkUser(this.email.value));
+		
 		checkUser(this.email.value);
-			addUser(this.email.value, this.nom.value, this.prenom.value, this.email.value,this.adresse.value,this.cp.value,this.ville.value, this.tel.value);
-		console.log('method: check // END');
+		addUser(this.email.value, this.nom.value, this.prenom.value, this.email.value,this.adresse.value,this.cp.value,this.ville.value, this.tel.value);
+		
 		return false;
 	}
 

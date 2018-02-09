@@ -16,7 +16,7 @@ body{
 /* principale */
 
 main{
-	width: 700px;
+	width: 1000px;
 	min-height: 500px;
 	margin: 0 auto;
 	background: red url('../images/fond.jpg');
@@ -228,5 +228,55 @@ nav > div#toggle{
 form .erreur{
 	background: rgba(255,0,0,0.3);
 	border: 1px solid grey;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+/* reservation */
+
+section .choix_mois{
+	width: 330px;
+	min-height: 200px;
+	display: inline-block;
+	//border: 2px solid red;
+	background: rgba(255,255,255,0.3);
+	box-shadow: 0 0 3px grey;
+	text-align: center;
+}
+
+section .choix_jour{
+	//box-shadow: 0 0 0 1px rgba(0,0,0,0.1);
+	width: 47px;
+	height: 47px; 
+	//line-height: 20px;
+	float: left;
+	padding-top: 25px;
+	vertical-align: middle;  
+}
+
+section .choix_jour.res_valid{
+	background: #eee;
+}
+
+section .choix_jour.res_valid:hover{
+	background: #cfc;
+}
+
+section .choix_jour:actif{
+	background: #afa;
+}
+
+section .reserved{
+	background: #fcc;
+}
+
+section .choix_jour.res_novalid{
+	background: #ddd;
 }
 

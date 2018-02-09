@@ -15,15 +15,14 @@ function Mytoggle(){
 
 const checkUser = async ($mail) => {
 
-   	const response = await fetch('http://localhost/aries-05-02-2018/project-toto/query/checkUser.php?mail='+ $mail);
+   	const response = await fetch('/pascal/project-toto/query/checkUser.php?mail='+ $mail);
     const status = await response.status;
-   
     console.log('function: checkUser //'+status);
     return status;
 }
 
 const addUser = async ($mail,$nom,$prenom,$adresse,$cp,$ville,$tel) => {
-   	const response = await fetch('http://localhost/aries-05-02-2018/project-toto/query/addUser.php?mail='+$mail+'&nom='+$nom+'&prenom='+$prenom+'&adresse='+$adresse+'&cp='+$cp+'&ville='+$ville+'&tel='+$tel);
+   	const response = await fetch('/pascal/project-toto/query/addUser.php?mail='+$mail+'&nom='+$nom+'&prenom='+$prenom+'&adresse='+$adresse+'&cp='+$cp+'&ville='+$ville+'&tel='+$tel);
     const status = await response.status;
     
     console.log('function: addUser //'+status);

@@ -6,7 +6,8 @@ $page = array(
 	'inscription' => 'inscription.php',
 	'compte' => 'compte.php',
 	'contact' => 'contact.php' ,
-	'panier' => 'panier.php'
+	'panier' => 'panier.php',
+	'recherche' => 'recherche.php'
 ); 	
  
  ?>

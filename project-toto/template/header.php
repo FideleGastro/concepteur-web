@@ -7,17 +7,17 @@
 
 	if(!empty($_POST['mail']) && !empty($_POST['pwd'])){
 		
-		$req = "SELECT cli_prenom FROM clients WHERE cli_email LIKE '";
-		$req .= $_POST['mail'];
-		$req .= "' AND cli_mdp LIKE '";
-		$req .= md5($_POST['pwd']);
-		$req .= "'";
+		$req_account = "SELECT cli_prenom FROM clients WHERE cli_email LIKE '";
+		$req_account .= $_POST['mail'];
+		$req_account .= "' AND cli_mdp LIKE '";
+		$req_account .= md5($_POST['pwd']);
+		$req_account .= "'";
 
-		$res = $totoDB->query($req);
-		$data = $res->fetch(PDO::FETCH_ASSOC);
+		$res_account = $totoDB->query($req_account);
+		$data_account = $res_account->fetch(PDO::FETCH_ASSOC);
 		
-		if($data)
-			$_SESSION['name'] = $data['cli_prenom'];
+		if($data_account)
+			$_SESSION['name'] = $data_account['cli_prenom'];
 		
 	}
 	
